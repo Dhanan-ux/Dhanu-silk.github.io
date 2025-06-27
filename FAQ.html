@@ -1,0 +1,86 @@
+<html>
+<title></title>
+<head>
+<style>
+.faqbox{
+background-color:#ABC8C7;
+opacity:0.8;
+border:2px solid #0D0221;
+font-family:"Times New Roman", Times, serif;
+padding:20px;
+color:#0D0221;
+}
+.answer{
+display:none;
+padding: 5px 0px;
+margin-bottom: 15px;
+}
+
+.faq-list-item{
+position:relative;
+margin:10px;
+border-bottom:1px solid #ccc;
+cursor:pointer;
+
+}
+
+.faq-list-item span{
+position: absolute;
+display:inline-block;
+top:15px;
+right:200px;
+font-size:20px;
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function(){
+$(".faq-list-item").click(function(){
+var $answer=$(this).find(".answer");
+
+if($answer.hasClass("open")){
+$answer.removeClass("open");
+$answer.slideUp();
+$(this).find("span").text("+");
+}
+else{
+$answer.addClass("open");
+$answer.slideDown();
+$(this).find("span").text("-");
+}
+});
+});
+
+
+</script>
+</head>
+<body>
+<center><h1><img src="yippee.jpg" width="100" height="100">Questions from our customers<img src="yippee.jpg" width="100" height="100"></img></h1></center>
+<div class="faqbox">
+<ul><li class="faq-list-item"><h2>Do you have t-shirts for men's wear?</h2>
+<span>+</span>
+<div class="answer"><p>YES!, their are plenty of t-shirts for men's wear</p></div></li>
+
+
+<li class="faq-list-item"><h2>Is your shop clothes cheap?</h2>
+<span>+</span>
+<div class="answer"><p>YES!,our cloth price is 10 to 900 dirhams range not exceeding after that</p></div></li>
+
+
+<li class="faq-list-item"><h2>Is the clothes in the shop international</h2>
+<span>+</span>
+<div class="answer"><p>YES!,It comes from all around the world from Japan, U.S.A., UK, India, Russia, China etc.</p></div></li>
+
+
+<li class="faq-list-item"><h2>Does it only contain clothes?</h2>
+<span>+</span>
+<div class="answer"><p>No,It also contains Accesories for Mobile Phone, Mobile fixing, Keychain, School accesories, Perfumes, and Snacks.</p></div></li></ul></div>
+<a href="index.html">INDEX</a>
+<a href="Men.html">MEN</a>
+<a href="Women.html">WOMEN</a>
+<a href="Kids.html">KIDS</a>
+
+
+</body>
+</html>
